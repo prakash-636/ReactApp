@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.8944aec1.css","mappings":"AAAA,oBACI,YAAa,CACb,sBAAuB,CACvB,UACF","sources":["styles/common.css"],"sourcesContent":[".centered-container {\r\n    display: flex;\r\n    justify-content: center; /* Horizontally center */\r\n    width: 100%;\r\n  }"],"names":[],"sourceRoot":""}
