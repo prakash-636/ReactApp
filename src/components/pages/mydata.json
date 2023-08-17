@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "John Doe",
+      "age": 28,
+      "gender": "Male",
+      "occupation": "Software Engineer",
+      "education": "Master's in Computer Science",
+      "location": "New York",
+      "height": "5'11\"",
+      "community": "Christian",
+      "interests": ["Hiking", "Photography", "Reading"],
+      "description": "I'm a tech enthusiast who loves exploring the outdoors and capturing moments through my camera lens.",
+      "profilePicture": "https://example.com/profiles/john_doe.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 26,
+      "gender": "Female",
+      "occupation": "Doctor",
+      "education": "MD in Internal Medicine",
+      "location": "Los Angeles",
+      "height": "5'6\"",
+      "community": "Hindu",
+      "interests": ["Cooking", "Traveling", "Yoga"],
+      "description": "Passionate about healing and wellness. I enjoy experimenting with recipes and exploring new places.",
+      "profilePicture": "https://example.com/profiles/jane_smith.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Alex Johnson",
+      "age": 30,
+      "gender": "Male",
+      "occupation": "Business Analyst",
+      "education": "MBA",
+      "location": "Chicago",
+      "height": "6'0\"",
+      "community": "Jewish",
+      "interests": ["Playing Guitar", "Cooking", "Movies"],
+      "description": "A numbers person with a creative side. I find joy in both analyzing data and strumming my guitar.",
+      "profilePicture": "https://example.com/profiles/alex_johnson.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Emily Lee",
+      "age": 24,
+      "gender": "Female",
+      "occupation": "Graphic Designer",
+      "education": "Bachelor's in Fine Arts",
+      "location": "San Francisco",
+      "height": "5'4\"",
+      "community": "Buddhist",
+      "interests": ["Painting", "Meditation", "Dancing"],
+      "description": "Expressing myself through art and movement. I find beauty in the smallest details of life.",
+      "profilePicture": "https://example.com/profiles/emily_lee.jpg"
+    }
+  ]
+  
