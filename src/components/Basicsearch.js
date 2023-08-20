@@ -7,10 +7,14 @@ import Select from "@mui/material/Select";
 import { Box, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Margin } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Basicsearch() {
   const [age, setAge] = React.useState("");
-
+  const [gender, setGender] = React.useState("");
+  const [lang, setLang] = React.useState("");
+  const navigate = useNavigate();
   const handleChange = (event) => {
     setAge(event.target.value);
   };
@@ -34,11 +38,11 @@ export default function Basicsearch() {
             Looking For
           </InputLabel>
           <Select
-            labelId="demo-simple-select-required-label"
-            id="demo-simple-select-required"
-            value={age}
+            value={gender}
             label="Looking For *"
-            onChange={handleChange}
+            onChange={(e) => {
+              setGender(e.target.value);
+            }}
           >
             <MenuItem value={10}>Male</MenuItem>
             <MenuItem value={20}>Female</MenuItem>
@@ -54,7 +58,9 @@ export default function Basicsearch() {
             id="demo-simple-select-required"
             value={age}
             label="Age between *"
-            onChange={handleChange}
+            onChange={(e) => {
+              setAge(e.target.value);
+            }}
           >
             <MenuItem value={20}>20-25</MenuItem>
             <MenuItem value={25}>25-30</MenuItem>
@@ -70,9 +76,11 @@ export default function Basicsearch() {
           <Select
             labelId="demo-simple-select-required-label"
             id="demo-simple-select-required"
-            value={age}
+            value={lang}
             label="Mother Tongue *"
-            onChange={handleChange}
+            onChange={(e) => {
+              setLang(e.target.value);
+            }}
           >
             <MenuItem value="">
               <em>None</em>
@@ -84,6 +92,9 @@ export default function Basicsearch() {
           <FormHelperText>Required</FormHelperText>
         </FormControl>
         <Button
+          onClick={() => {
+            navigate("/page");
+          }}
           sx={{
             color: "#fff",
             backgroundColor: "#009aaf",

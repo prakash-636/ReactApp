@@ -20,7 +20,7 @@ function Browse() {
         <Card
           sx={{
             height: 460,
-            width: 410,
+            width: {sm:"410",xs:"300"},
             boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.1)",
             margin: "25px",
             borderRadius: "25px",
@@ -55,10 +55,12 @@ function Browse() {
         <Card
           sx={{
             height: 460,
-            width: 410,
+            width: {sm:"410",xs:"300"},
             boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.1)",
             margin: "25px",
             borderRadius: "25px",
+
+            
           }}
         >
           <Typography
@@ -92,7 +94,7 @@ function Browse() {
         <Card
           sx={{
             height: 460,
-            width: 410,
+            width: {sm:"410",xs:"300"},
             boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.1)",
             margin: "25px",
             borderRadius: "25px",

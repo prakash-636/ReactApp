@@ -27,7 +27,7 @@ export default function FormFour() {
 
   return (
     <Box sx={{ backgroundColor: "#c5dcd4", padding: "20px" }}>
-      <Typography variant="h5">Form 4</Typography>
+      <Typography variant="h5">Address</Typography>
       <Box
         component="form"
         noValidate
@@ -44,11 +44,11 @@ export default function FormFour() {
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="given-name"
-                name="firstName"
+                name="city"
                 required
                 fullWidth
-                id="firstName"
-                label="First Name"
+                id="City"
+                label="City"
                 autoFocus
               />
             </Grid>
@@ -56,9 +56,9 @@ export default function FormFour() {
               <TextField
                 required
                 fullWidth
-                id="MiddleName"
-                label="Middle Name"
-                name="MiddleName"
+                id="State"
+                label="State"
+                name="state"
                 autoComplete="family-name"
               />
             </Grid>
@@ -66,9 +66,9 @@ export default function FormFour() {
               <TextField
                 required
                 fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
+                id="pincode"
+                label="Pin Code"
+                name="pinCode"
                 autoComplete="family-name"
               />
             </Grid>
@@ -76,110 +76,22 @@ export default function FormFour() {
               <TextField
                 required
                 fullWidth
-                id="contact"
-                label="Contact"
-                name="contact"
-                autoComplete="contact"
+                id="country"
+                label="Country"
+                name="country"
+                autoComplete="countary"
               />
             </Grid>
-
-            <Grid item xs={12}>
-              <TextField
-                required
-                fullWidth
-                name="whatsApp Contact"
-                label="whatsApp Contact"
-                type="whatsApp Contact"
-                id="whatsAppContact"
-                autoComplete="whatsApp Contact"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Mother Tongue
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Mother Tongue *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value="">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value={1}>Telugu</MenuItem>
-                  <MenuItem value={2}>Kannada</MenuItem>
-                  <MenuItem value={3}>Hindi</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Looking For
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Looking For *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={10}>Male</MenuItem>
-                  <MenuItem value={20}>Female</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Looking For
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Looking For *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={10}>Male</MenuItem>
-                  <MenuItem value={20}>Female</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Age between
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Age between *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={20}>20-25</MenuItem>
-                  <MenuItem value={25}>25-30</MenuItem>
-                  <MenuItem value={30}>30-35</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
+            
           </Grid>
-          <Button
+          {/* <Button
             type="submit"
             fullWidth
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
             Sign Up
-          </Button>
+          </Button> */}
         </Box>
       </Box>
     </Box>

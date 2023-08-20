@@ -27,7 +27,7 @@ export default function FormOne() {
 
   return (
     <Box sx={{ backgroundColor: "#c5dcd4", padding: "20px" }}>
-      <Typography variant="h5">Form 1</Typography>
+      <Typography variant="h5">Profile Details </Typography>
       <Box
         component="form"
         noValidate
@@ -72,14 +72,40 @@ export default function FormOne() {
                 autoComplete="family-name"
               />
             </Grid>
+
+            
+            <Grid item xs={12}>
+              <FormControl required sx={{ m: 1, minWidth: 440 }}>
+                <InputLabel id="demo-simple-select-required-label">
+                  Gender
+                </InputLabel>
+                <Select
+                  labelId="demo-simple-select-required-label"
+                  id="demo-simple-select-required"
+                  
+                  label="Gender*"
+                  onChange={handleChange}
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value={1}>Male</MenuItem>
+                  <MenuItem value={2}>Female</MenuItem>
+                  
+                </Select>
+                <FormHelperText>Required</FormHelperText>
+              </FormControl>
+            </Grid>
+
             <Grid item xs={12}>
               <TextField
                 required
                 fullWidth
-                id="contact"
-                label="Contact"
-                name="contact"
-                autoComplete="contact"
+                name="dob"
+                label="Date of Birth"
+                type="Date"
+                id="dob"
+                autoComplete="Date of Birth"
               />
             </Grid>
 
@@ -87,99 +113,14 @@ export default function FormOne() {
               <TextField
                 required
                 fullWidth
-                name="whatsApp Contact"
-                label="whatsApp Contact"
-                type="whatsApp Contact"
-                id="whatsAppContact"
-                autoComplete="whatsApp Contact"
+                name="age"
+                label="Age"
+                type="number"
+                id="age"
+                autoComplete="Age"
               />
             </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Mother Tongue
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Mother Tongue *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value="">
-                    <em>None</em>
-                  </MenuItem>
-                  <MenuItem value={1}>Telugu</MenuItem>
-                  <MenuItem value={2}>Kannada</MenuItem>
-                  <MenuItem value={3}>Hindi</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Looking For
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Looking For *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={10}>Male</MenuItem>
-                  <MenuItem value={20}>Female</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Looking For
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Looking For *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={10}>Male</MenuItem>
-                  <MenuItem value={20}>Female</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <FormControl required sx={{ m: 1, minWidth: 440 }}>
-                <InputLabel id="demo-simple-select-required-label">
-                  Age between
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-required-label"
-                  id="demo-simple-select-required"
-                  value={age}
-                  label="Age between *"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={20}>20-25</MenuItem>
-                  <MenuItem value={25}>25-30</MenuItem>
-                  <MenuItem value={30}>30-35</MenuItem>
-                </Select>
-                <FormHelperText>Required</FormHelperText>
-              </FormControl>
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            sx={{ mt: 3, mb: 2 }}
-          >
-            Sign Up
-          </Button>
+           </Grid> 
         </Box>
       </Box>
     </Box>

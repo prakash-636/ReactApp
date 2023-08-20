@@ -67,9 +67,9 @@ export default function DetailContainer() {
         ) : (
           <Button
             onClick={handleSubmit}
-            fullWidth
+            
             variant="contained"
-            sx={{ mt: 3, mb: 2 }}
+            
           >
             Submit
           </Button>

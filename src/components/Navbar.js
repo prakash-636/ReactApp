@@ -72,7 +72,10 @@ const Navbar = () => {
           Navbar
         </Typography>
         <Pets sx={{ display: { xs: "block", sm: "none" } }} />
-        <Icons>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          Navbar
+        </Typography>
+        {/* <Icons>
           <Badge badgeContent={5} color="error">
             <MailIcon />
           </Badge>
@@ -91,7 +94,7 @@ const Navbar = () => {
             src="https://m.cricbuzz.com/a/img/v1/192x192/i1/c244980/virat-kohli.jpg"
           />
           <Typography>Virat</Typography>
-        </UserIcons>
+        </UserIcons> */}
         <Button sx={{ color: "white" }} onClick={handleOpenModal}>
           Login
         </Button>

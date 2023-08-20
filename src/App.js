@@ -13,6 +13,7 @@ import ListingPage from "./components/pages/ListingPage";
 import DetailPage from "./components/pages/DetailPage";
 import FilterCards from "./components/pages/FilterCards";
 
+
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
           <Route path="/detail/:id" element={<DetailPage />} />
           <Route path="/profile" element={<DetailContainer />} />
           <Route path="/Signin" element={<Sigin />} />
-          <Route path="/SignUp" element={<SignUp />} />
+          {/* <Route path="/profile" element={<SignUp />} /> */}
         </Routes>
       </BrowserRouter>
     </>

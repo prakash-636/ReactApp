@@ -12,27 +12,22 @@ import { autoPlay } from "react-swipeable-views-utils";
 import "../styles/common.css";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
+
+
 const images = [
   {
     label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath:
-      "https://msrit-bucket.s3.us-west-2.amazonaws.com/Banner/Admission_2023.jpg",
+    imgPath:'pic3.jpeg',
   },
   {
     label: "Bird",
-    imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
-  },
+    imgPath:'pic2.jpeg',},
   {
     label: "Bali, Indonesia",
-    imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
-  },
+    imgPath:'pic4.jpeg',},
   {
     label: "Goč, Serbia",
-    imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-  },
+    imgPath:'pic1.jpeg',},
 ];
 
 function Sliderpost() {

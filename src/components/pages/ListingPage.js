@@ -30,7 +30,8 @@ const initialData = [
     "community": "Christian",
     "interests": ["Hiking", "Photography", "Reading"],
     "description": "I'm a tech enthusiast who loves exploring the outdoors and capturing moments through my camera lens.",
-    "profilePicture": "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg"
+    "profilePicture": "https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg",
+    "whatsApp":"6360034113"
   },
   {
     "id": 2,
@@ -44,7 +45,8 @@ const initialData = [
     "community": "Hindu",
     "interests": ["Cooking", "Traveling", "Yoga"],
     "description": "Passionate about healing and wellness. I enjoy experimenting with recipes and exploring new places.",
-    "profilePicture": "https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=qmOTkGstKj1qN0zPVWj-n28oRA6_BHQN8uVLIXg0TF8="
+    "profilePicture": "https://media.istockphoto.com/id/1289220545/photo/beautiful-woman-smiling-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=qmOTkGstKj1qN0zPVWj-n28oRA6_BHQN8uVLIXg0TF8=",
+    "whatsApp":"7894563210"
   },
   {
     "id": 3,
@@ -58,7 +60,8 @@ const initialData = [
     "community": "Jewish",
     "interests": ["Playing Guitar", "Cooking", "Movies"],
     "description": "A numbers person with a creative side. I find joy in both analyzing data and strumming my guitar.",
-    "profilePicture": "https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo="
+    "profilePicture": "https://media.istockphoto.com/id/1200677760/photo/portrait-of-handsome-smiling-young-man-with-crossed-arms.jpg?s=612x612&w=0&k=20&c=g_ZmKDpK9VEEzWw4vJ6O577ENGLTOcrvYeiLxi8mVuo=",
+    "whatsApp":"7894563210"
   },
   {
     "id": 4,
@@ -72,7 +75,8 @@ const initialData = [
     "community": "Buddhist",
     "interests": ["Painting", "Meditation", "Dancing"],
     "description": "Expressing myself through art and movement. I find beauty in the smallest details of life.",
-    "profilePicture": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-733872.jpg&fm=jpg"
+    "profilePicture": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-733872.jpg&fm=jpg",
+    "whatsApp":"7894563210"
   }
 ]
 
