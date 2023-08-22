@@ -7,6 +7,9 @@ import Select from "@mui/material/Select";
 import { Box, Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Margin } from "@mui/icons-material";
+import { useDispatch,useSelector } from "react-redux";
+import { useState } from "react";
+import { fromsliceaction } from "../../reduxdata/signupform";
 import {
   Avatar,
   TextField,
@@ -18,19 +21,58 @@ import {
   CssBaseline,
 } from "@mui/material";
 
-export default function FormOne() {
+export default function FormOne(props) {
   const [age, setAge] = React.useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
 
-  return (
+
+
+  const dispatch=useDispatch()
+
+
+  const currentForm=useSelector(state=>state.signup.counterFrom)
+
+  console.log(currentForm,"djbceoujhcbuhvcbvuchbvihbevihb")
+
+  const [formData, setFormData] = useState({
+    field1: "",
+    field2: "",
+    field3: "",
+    field4: "",
+    field5: "",
+  });
+
+  const handleNext = () => {
+dispatch(fromsliceaction.handlecurrentfrom())
+
+
+
+ 
+    
+  };
+
+  const handlePrevious = () => {
+    dispatch(fromsliceaction.previousfrom())
+  };
+
+
+
+  const handleSubmit = () => {
+    // Handle form submission logic here with formData
+    console.log("Form data submitted:", formData);
+  };
+const submithandler=(e)=>{
+e.preventDefault()
+dispatch(fromsliceaction.handlecurrentfrom())
+}
+ return (
     <Box sx={{ backgroundColor: "#c5dcd4", padding: "20px" }}>
       <Typography variant="h5">Profile Details </Typography>
       <Box
-        component="form"
-        noValidate
+        
         sx={{
           mt: 1,
 
@@ -39,7 +81,7 @@ export default function FormOne() {
           flexDirection: { sm: "row", xs: "column" },
         }}
       >
-        <Box component="form" noValidate sx={{ mt: 3 }}>
+        <Box component="form" onSubmit={submithandler} sx={{ mt: 3 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -50,6 +92,9 @@ export default function FormOne() {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                onChange={(e)=>{
+                  props.handleChange(e)
+                }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -60,6 +105,9 @@ export default function FormOne() {
                 label="Middle Name"
                 name="MiddleName"
                 autoComplete="family-name"
+                onChange={(e)=>{
+                  props.handleChange(e)
+                }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -70,6 +118,9 @@ export default function FormOne() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="family-name"
+                onChange={(e)=>{
+                  props.handleChange(e)
+                }}
               />
             </Grid>
 
@@ -82,15 +133,17 @@ export default function FormOne() {
                 <Select
                   labelId="demo-simple-select-required-label"
                   id="demo-simple-select-required"
-                  
+                  name="gender"
                   label="Gender*"
-                  onChange={handleChange}
+                  onChange={(e)=>{
+                    props.handleChange(e)
+                  }}
                 >
                   <MenuItem value="">
                     <em>None</em>
                   </MenuItem>
-                  <MenuItem value={1}>Male</MenuItem>
-                  <MenuItem value={2}>Female</MenuItem>
+                  <MenuItem value={"Male"}>Male</MenuItem>
+                  <MenuItem value={'Female'}>Female</MenuItem>
                   
                 </Select>
                 <FormHelperText>Required</FormHelperText>
@@ -106,6 +159,12 @@ export default function FormOne() {
                 type="Date"
                 id="dob"
                 autoComplete="Date of Birth"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                onChange={(e)=>{
+                  props.handleChange(e)
+                }}
               />
             </Grid>
 
@@ -118,9 +177,34 @@ export default function FormOne() {
                 type="number"
                 id="age"
                 autoComplete="Age"
+                onChange={(e)=>{
+                  props.handleChange(e)
+                }}
               />
             </Grid>
            </Grid> 
+           <Box sx={{ display: "flex", justifyContent: "space-between",marginTop:"2rem" }}>
+    
+    {currentForm !== 1 && (
+      <Button variant="outlined" onClick={handlePrevious}>
+        Previous
+      </Button>
+    )}
+    {currentForm !== 5 ? (
+      <Button  type="submit" variant="contained">
+        Next
+      </Button>
+    ) : (
+      <Button
+        onClick={handleSubmit}
+        
+        variant="contained"
+        
+      >
+        Submit
+      </Button>
+    )}
+  </Box>
         </Box>
       </Box>
     </Box>

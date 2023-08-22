@@ -16,7 +16,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import DetailPage from "./DetailPage";
 import { Link } from "react-router-dom";
 import { display } from "@mui/system";
-
+import { useDispatch,useSelector } from "react-redux";
 const initialData = [
   {
     "id": 1,
@@ -87,8 +87,10 @@ const ListingPage = () => {
   const [selectedId, setSelectedId] = useState(null); // Holds the selected card's ID
   const [location, setLocation] = useState('');
   const [occupation, setOccupation] = useState('');
-  const [gender, setGender] = useState('');
-
+ 
+ const filters=useSelector(state=>state.filter.filters)
+ const [gender, setGender] = useState(filters.gender)
+ const [age, setage] = useState(filters.age)
   const toggleFavorite = (id) => {
     setData((prevData) =>
       prevData.map((item) =>
@@ -105,16 +107,22 @@ const ListingPage = () => {
   const handleCardClick = (id) => {
     setSelectedId(id);
   };
+  let num=[]
+  if(age){
+    let text = age.toString()
+     num=text.split('-')}
+  
+  console.log(num[0]<=28<=num[1],num[0],num[1],"num")
 
-  const filteredData = data.filter((item) =>{
-    if (location && item.location !== location) return false;
-    if (occupation && item.occupation !== occupation) return false;
-    if (gender && item.gender !== gender) return false;
-    return true;
 
-  }
-  );
+  const filteredData = data.filter((item) =>
+  (!age || item.age>=num[0] && item.age<=num[1]) &&
+  (!location || item.location === location) &&
+  (!occupation || item.occupation === occupation) &&
+  (!gender || item.gender === gender)
+);
 
+console.log(typeof(filters.age),"kjbdkjcbsdcjkb")
   return (
     <Box padding={"10px"}>
 
@@ -141,9 +149,20 @@ const ListingPage = () => {
         </Select>
       </FormControl>
 
+      <FormControl  sx={{ m: 1, minWidth: 100 }}>
+        <InputLabel>Age</InputLabel>
+        <Select  label="occupation *" defaultValue={filters.age} onChange={e =>setage(e.target.value)}>
+          <MenuItem value="">All</MenuItem>
+          <MenuItem value="20-25">20-25</MenuItem>
+          <MenuItem value="25-30">25-30</MenuItem>
+          <MenuItem value="30-35">30-35</MenuItem>
+          {/* Add more categories */}
+        </Select>
+      </FormControl>
+
       <FormControl required sx={{ m: 1, minWidth: 100 }}>
         <InputLabel>Gender</InputLabel>
-        <Select value={gender} label="Gender" onChange={e => setGender(e.target.value)}>
+        <Select  defaultValue={filters.gender} label="Gender" onChange={e => setGender(e.target.value)}>
           <MenuItem value="">All</MenuItem>
           <MenuItem value="Male">Male</MenuItem>
           <MenuItem value="Female">Female</MenuItem>

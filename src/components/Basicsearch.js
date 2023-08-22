@@ -9,8 +9,10 @@ import Typography from "@mui/material/Typography";
 import { Margin } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { filtersliceaction } from "../reduxdata/Filter";
 export default function Basicsearch() {
+  const dispatch=useDispatch()
   const [age, setAge] = React.useState("");
   const [gender, setGender] = React.useState("");
   const [lang, setLang] = React.useState("");
@@ -44,8 +46,8 @@ export default function Basicsearch() {
               setGender(e.target.value);
             }}
           >
-            <MenuItem value={10}>Male</MenuItem>
-            <MenuItem value={20}>Female</MenuItem>
+            <MenuItem value={"Male"}>Male</MenuItem>
+            <MenuItem value={"Female"}>Female</MenuItem>
           </Select>
           <FormHelperText>Required</FormHelperText>
         </FormControl>
@@ -62,9 +64,9 @@ export default function Basicsearch() {
               setAge(e.target.value);
             }}
           >
-            <MenuItem value={20}>20-25</MenuItem>
-            <MenuItem value={25}>25-30</MenuItem>
-            <MenuItem value={30}>30-35</MenuItem>
+            <MenuItem value={"20-25"}>20-25</MenuItem>
+            <MenuItem value={"25-30"}>25-30</MenuItem>
+            <MenuItem value={"30-35"}>30-35</MenuItem>
           </Select>
           <FormHelperText>Required</FormHelperText>
         </FormControl>
@@ -85,15 +87,16 @@ export default function Basicsearch() {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={1}>Telugu</MenuItem>
-            <MenuItem value={2}>Kannada</MenuItem>
-            <MenuItem value={3}>Hindi</MenuItem>
+            <MenuItem value={'Telugu'}>Telugu</MenuItem>
+            <MenuItem value={'Kannada'}>Kannada</MenuItem>
+            <MenuItem value={'Hindi'}>Hindi</MenuItem>
           </Select>
           <FormHelperText>Required</FormHelperText>
         </FormControl>
         <Button
           onClick={() => {
             navigate("/page");
+            dispatch(filtersliceaction.addfilters({gender:gender,age:age,lang:lang}))
           }}
           sx={{
             color: "#fff",
